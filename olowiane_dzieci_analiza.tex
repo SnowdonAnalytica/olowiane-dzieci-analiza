@@ -175,6 +175,7 @@
   bookmarks=true,
   bookmarksnumbered=true
 ]{hyperref}
+\usepackage{xurl}          % allows long URLs to break at slashes
 
 % ── Section title styling ────────────────────────────────────
 \usepackage{titlesec}
@@ -207,13 +208,13 @@
 % \poltext{} — display block for quoted Polish source text
 \newcommand{\poltext}[1]{%
   \vspace{0.5em}
-  {\color{polishblue}\large\itshape #1}%
+  {\color{keywordred}\large\itshape #1}%
   \vspace{0.3em}\par
 }
 
 % \poltrans{} — English translation line
 \newcommand{\poltrans}[1]{%
-  {\color{analysisgrey}\small\upshape\textbf{Translation:} #1}\par
+  {\color{polishblue}\small\upshape\textbf{Translation:} #1}\par
   \vspace{0.5em}
   \color{rulecolour}\noindent\rule{\linewidth}{0.3pt}\color{black}
   \vspace{0.3em}
@@ -248,6 +249,15 @@
 \setlist[itemize]{leftmargin=1.5em, itemsep=0.2em}
 \setlist[description]{leftmargin=1.5em, labelwidth=4em, itemsep=0.3em}
 
+% ── Preface version selector ─────────────────────────────────
+%  Change the value below to switch preface versions.
+%  'short' — brief half-page AI disclosure (default)
+%  'full'  — complete methodological preface (preface_ai.tex)
+%  The \ifthenelse block in the body reads this and inputs the
+%  correct file automatically — no other change needed.
+\usepackage{ifthen}
+\newcommand{\prefaceversion}{short}  % ← change to: short | full
+
 % ── Fix default body colour after xcolor pagecolor ───────────
 \color{black}
 \makeatletter
@@ -280,7 +290,11 @@
 \tableofcontents
 
 % ── Preface: Use of AI ───────────────────────────────────────
-\input{preface_ai}
+%  Controlled by \prefaceversion in the preamble — edit that
+%  value only; do not change anything here.
+\ifthenelse{\equal{\prefaceversion}{full}}
+  {\input{preface_ai}}
+  {\input{preface_ai_short}}
 
 % ── Grammar Foundations ──────────────────────────────────────
 \input{grammar}
