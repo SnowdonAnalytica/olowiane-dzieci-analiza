@@ -1,0 +1,329 @@
+% ============================================================
+%  olowiane_dzieci_analiza.tex  —  Main file
+%  Ołowiane dzieci. Zapomniana epidemia — Polish Study Companion
+%  Compile with pdfLaTeX (or XeLaTeX — see font note below)
+% ============================================================
+%
+% ── PROJECT CONTEXT (for session handoff) ───────────────────
+%
+%  This document is a phrase-by-phrase Polish language analysis
+%  of the book "Ołowiane dzieci. Zapomniana epidemia" by Michał
+%  Jędryk (a Polish-language book about a lead poisoning epidemic,
+%  not available in English translation).
+%
+%  PURPOSE: Polish language learning through close reading.
+%  The document is for private, personal, educational use only
+%  and is not for distribution or commercial use.
+%
+% ── LEARNER PROFILE ─────────────────────────────────────────
+%
+%  - Native English speaker, age 61, based in Montreal, Canada,
+%    with a condo in Kraków, Poland.
+%  - Has ADHD and dyslexia/dysorthographia. LaTeX is an
+%    accessibility aid: wheat background, clean typesetting,
+%    structured navigation, and non-editable PDF output all
+%    reduce visual fatigue. Avoid visually cluttered formatting.
+%  - Documented working memory deficits (associated with ADHD):
+%    rote memorisation is ineffective. Learning happens through
+%    repeated contextual exposure — absorption, not drilling.
+%  - Compensating strength (noted by neuropsychologist): strong
+%    pattern recognition and rule derivation. Grammatical analysis
+%    is not an academic exercise but the actual learning mechanism
+%    — seeing the pattern once is worth more than memorising
+%    paradigm tables. Frame analyses accordingly.
+%  - Strong auditory learner — achieved near-native French
+%    entirely by ear after immersion. Learns by osmosis rather
+%    than rote memorisation.
+%  - Latin background (high school): already understands noun
+%    declension, verb conjugation, and grammatical cases
+%    conceptually. Does not need these explained from scratch —
+%    only the Polish instantiation of familiar concepts.
+%  - Also has passive background in Russian and basic
+%    conversational Polish from a Polish wife and in-laws.
+%  - Goal: break through a conversational plateau; prepare for
+%    regular extended stays in Kraków.
+%
+% ── ANALYSIS APPROACH ───────────────────────────────────────
+%
+%  - The user supplies screenshots of the book (DRM prevents
+%    copying) one sentence or short passage at a time.
+%  - The AI provides: full translation, word-by-word breakdown,
+%    grammatical analysis, and literary/contextual commentary.
+%  - Depth of unpacking is calibrated to interest — linger where
+%    the language or content is rich, move faster elsewhere.
+%  - Tangential grammar questions are welcomed and encouraged.
+%  - The learner does NOT stress about memorisation; absorption
+%    happens naturally through engagement with the content.
+%  - LaTeX is updated periodically (not after every sentence) at
+%    natural section breaks or roughly every 10–15 sentences.
+%
+% ── DOCUMENT STRUCTURE ──────────────────────────────────────
+%
+%  olowiane_dzieci_analiza.tex  — this file (main, compile this)
+%  grammar.tex                  — Polish grammar foundations
+%  ch00_karta_tytulowa.tex      — front matter passages
+%  ch01_jeszcze_jeden_pogrzeb.tex — Chapter 1 (in progress)
+%  ch02_... etc.                — subsequent chapters (stub)
+%
+%  All chapter files are \input{}'d below. Chapters not yet
+%  started are listed but commented out.
+%
+% ── CUSTOM COMMANDS ─────────────────────────────────────────
+%
+%  \poltext{...}      — quoted Polish source text (blue italic)
+%  \poltrans{...}     — English translation line
+%  \polword{word}{gloss} — inline Polish term with translation
+%  \grambox{title}{content} — shaded grammar note box
+%
+% ── USE OF AI ────────────────────────────────────────────────
+%
+%  All phrase-by-phrase analysis in this document was generated
+%  with the assistance of Anthropic's Claude Sonnet 4.5 model
+%  (model string: claude-sonnet-4-5), accessed via the Claude.ai
+%  web interface. The analysis was produced interactively: the
+%  learner supplied screenshots of the source text one passage
+%  at a time, and the model provided translation, grammatical
+%  breakdown, and literary commentary in a conversational
+%  session. The LaTeX document was also structured, drafted, and
+%  updated by the model in response to the learner's direction.
+%
+%  This workflow is described in full in the "Use of AI" preface
+%  section of the compiled document, so that others may adapt
+%  the method for their own language learning purposes.
+%
+%  The project is shared openly on GitHub. Neither the analysis
+%  nor the document constitute a reproduction of the source text
+%  — quoted passages are brief and used solely for educational
+%  commentary consistent with fair use principles.
+%
+% ── SESSION HANDOFF INSTRUCTIONS ────────────────────────────
+%
+%  If you are a new AI session picking up this project:
+%  1. Read this comment block in full.
+%  2. Read grammar.tex to understand the grammatical framework
+%     established so far.
+%  3. Read the most recent active chapter file to see where
+%     the reading left off.
+%  4. The user will supply the next passage as a screenshot.
+%     Continue the phrase-by-phrase analysis in the same style.
+%  5. When enough new material has accumulated, offer to update
+%     the relevant chapter .tex file.
+%  6. Maintain the tone of the existing analyses: informative,
+%     literary where appropriate, and enjoyable to read in their
+%     own right — not merely functional glosses.
+%
+% ============================================================
+
+\documentclass[12pt, a4paper, openany]{book}
+
+% ── Encoding & Language ─────────────────────────────────────
+\usepackage[T1]{fontenc}   % T1 required for Polish characters (ą ę ó ś ź ż ć ń ł)
+\usepackage[utf8]{inputenc}
+\usepackage[polish, english]{babel}
+
+% ── Page geometry ───────────────────────────────────────────
+\usepackage[
+  a4paper,
+  top=2.5cm, bottom=2.5cm,
+  left=3cm,  right=3cm,
+  marginparwidth=0cm,
+  headheight=14pt
+]{geometry}
+
+% ── Colour ──────────────────────────────────────────────────
+\usepackage{xcolor}
+
+\definecolor{wheat}{RGB}{245, 222, 179}
+\definecolor{polishblue}{RGB}{25, 80, 140}
+\definecolor{analysisgrey}{RGB}{60, 60, 60}
+\definecolor{keywordred}{RGB}{160, 30, 30}
+\definecolor{rulecolour}{RGB}{180, 150, 100}
+\definecolor{toccolour}{RGB}{25, 80, 140}
+
+\pagecolor{wheat}
+% body text is black on wheat — no override needed here
+
+% ── Fonts ───────────────────────────────────────────────────
+% If compiling with XeLaTeX/LuaLaTeX, use fontspec for best results.
+% If using pdfLaTeX, the following provides reasonable output.
+\usepackage{palatino}   % body font — good x-height, readable
+\usepackage{microtype}  % improved kerning and spacing
+
+% ── Spacing ─────────────────────────────────────────────────
+\usepackage{setspace}
+\setstretch{1.4}        % generous line spacing for readability
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+
+% ── Headers & Footers ───────────────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\color{polishblue}\itshape\leftmark}
+\fancyfoot[C]{\small\color{analysisgrey}\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\headrule}{\color{rulecolour}\hrule width\headwidth height\headrulewidth}
+
+% ── Hyperlinks & PDF metadata ────────────────────────────────
+\usepackage[
+  colorlinks=true,
+  linkcolor=toccolour,
+  urlcolor=toccolour,
+  citecolor=toccolour,
+  pdftitle={Ołowiane dzieci — Polish Study Companion},
+  pdfauthor={Personal Study Document},
+  bookmarks=true,
+  bookmarksnumbered=true
+]{hyperref}
+
+% ── Section title styling ────────────────────────────────────
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries\color{polishblue}}
+  {\chaptertitlename\ \thechapter}{10pt}{\Huge}
+\titlespacing{\chapter}{0pt}{0pt}{20pt}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{polishblue}}
+  {}{0em}{}[\color{rulecolour}\titlerule]
+\titlespacing{\section}{0pt}{1.5em}{0.8em}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\color{keywordred}}
+  {}{0em}{}
+\titlespacing{\subsection}{0pt}{1em}{0.4em}
+
+% ── TOC styling ──────────────────────────────────────────────
+\usepackage{tocloft}
+\renewcommand{\cftchapfont}{\bfseries\color{polishblue}}
+\renewcommand{\cftchappagefont}{\bfseries\color{polishblue}}
+\setlength{\cftbeforechapskip}{0.5em}
+% Only show chapters in TOC (not sections/subsections)
+\setcounter{tocdepth}{0}
+
+% ── Custom environments and commands ─────────────────────────
+
+% \poltext{} — display block for quoted Polish source text
+\newcommand{\poltext}[1]{%
+  \vspace{0.5em}
+  {\color{polishblue}\large\itshape #1}%
+  \vspace{0.3em}\par
+}
+
+% \poltrans{} — English translation line
+\newcommand{\poltrans}[1]{%
+  {\color{analysisgrey}\small\upshape\textbf{Translation:} #1}\par
+  \vspace{0.5em}
+  \color{rulecolour}\noindent\rule{\linewidth}{0.3pt}\color{black}
+  \vspace{0.3em}
+}
+
+% \polword{word}{gloss} — inline Polish term with translation
+\newcommand{\polword}[2]{%
+  \textbf{\color{polishblue}#1}~{\color{keywordred}(#2)}%
+}
+
+% \grambox{title}{content} — shaded grammar note
+\usepackage{mdframed}
+\mdfdefinestyle{gramstyle}{%
+  backgroundcolor=white!60!wheat,
+  linecolor=rulecolour,
+  linewidth=0.6pt,
+  innertopmargin=6pt,
+  innerbottommargin=6pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  skipabove=0.8em,
+  skipbelow=0.8em
+}
+\newcommand{\grambox}[2]{%
+  \begin{mdframed}[style=gramstyle]
+    \textbf{\color{keywordred}#1}\quad #2
+  \end{mdframed}
+}
+
+% ── Utility ──────────────────────────────────────────────────
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.5em, itemsep=0.2em}
+\setlist[description]{leftmargin=1.5em, labelwidth=4em, itemsep=0.3em}
+
+% ── Fix default body colour after xcolor pagecolor ───────────
+\color{black}
+\makeatletter
+\let\old@document\document
+\renewcommand{\document}{\old@document\color{black}}
+\makeatother
+
+% ============================================================
+\begin{document}
+\color{black}  % ensure body text is black on wheat
+
+% ── Title page ───────────────────────────────────────────────
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+  {\Huge\bfseries\color{polishblue} Ołowiane dzieci}\par
+  \vspace{0.5em}
+  {\large\itshape Zapomniana epidemia}\par
+  \vspace{0.3em}
+  {\normalsize Michał Jędryk}\par
+  \vspace{2.5cm}
+  {\LARGE\color{keywordred} Polish Language Study Companion}\par
+  \vspace{1em}
+  {\normalsize A phrase-by-phrase reading with grammatical analysis}\par
+  \vfill
+  {\small\color{analysisgrey} Openly shared for educational purposes — see preface for licence and copyright notes}
+\end{titlepage}
+
+% ── Table of Contents ────────────────────────────────────────
+\tableofcontents
+
+% ── Preface: Use of AI ───────────────────────────────────────
+\input{preface_ai}
+
+% ── Grammar Foundations ──────────────────────────────────────
+\input{grammar}
+
+% ── Book Chapters ────────────────────────────────────────────
+% Karta tytułowa (front matter passages)
+\input{ch00_karta_tytulowa}
+
+% Chapter 1
+\input{ch01_jeszcze_jeden_pogrzeb}
+
+% Subsequent chapters — uncomment as work progresses
+% \input{ch02_ostatni_dzien_wakacji}
+% \input{ch03_krolowa}
+% \input{ch04_znikajaca_klasa}
+% \input{ch05_diagnoza_szwajcaria}
+% \input{ch06_pacjent_zero}
+% \input{ch07_osiedlowy_detektyw}
+% \input{ch08_rob_co_chcesz}
+% \input{ch09_teenage_dream}
+% \input{ch10_krolowa_wojewoda_i_cysorz}
+% \input{ch11_placz_pod_wieza}
+% \input{ch12_boj_w_hucie}
+% \input{ch13_szklana_niepogoda}
+% \input{ch14_exodus_od_smrodu}
+% \input{ch15_badanie_glowy}
+% \input{ch16_szpieg_i_ortografia}
+% \input{ch17_dwa_razy_kwestia_mieszkaniowa}
+% \input{ch18_pozegnanie}
+% \input{ch19_trzeba_isc_z_tym_wyzej}
+% \input{ch20_dzien_w_podrozy}
+% \input{ch21_radosc_na_placu_dzierzynskiego}
+% \input{ch22_na_przelaczy}
+% \input{ch23_strefa_ochronna}
+% \input{ch24_babskie_wembley}
+% \input{ch25_daleko_od_domu}
+% \input{ch26_matka_w_zielonym_fiacie}
+% \input{ch27_honoris_causa}
+% \input{ch28_powroty}
+% \input{ch29_gorzka_prawda}
+% \input{ch30_dwie_matki}
+% \input{ch31_izba_tradycji}
+% \input{ch32_olowiany_balast}
+% \input{ch33_od_autora}
+
+\end{document}

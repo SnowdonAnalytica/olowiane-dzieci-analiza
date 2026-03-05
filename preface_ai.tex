@@ -1,0 +1,198 @@
+% ============================================================
+%  preface_ai.tex  —  Preface: Use of AI
+%  Referenced by olowiane_dzieci_analiza.tex via \input{preface_ai}
+% ============================================================
+
+\chapter*{A Note on Method: Use of Artificial Intelligence}
+\addcontentsline{toc}{chapter}{A Note on Method: Use of AI}
+\markboth{A Note on Method}{}
+
+This document was produced with the assistance of a large language
+model (LLM) and is shared openly in the hope that others may adapt
+the method for their own language learning.
+
+\section*{The Learning Context}
+
+The author is a native English speaker with a Polish wife, Polish
+in-laws, and a recently acquired apartment in Kraków. After more than
+twenty years of incidental exposure to Polish, conversational ability
+had plateaued at a level sufficient for simple transactions but
+inadequate for real two-way communication. The goal of this project
+is to break through that plateau by engaging deeply with a Polish-language
+book that is genuinely interesting, not available in English translation,
+and whose subject matter --- a lead poisoning epidemic in industrial
+Silesia --- connects directly to the author's professional background
+in biomedical engineering.
+
+The author has ADHD and dyslexia/dysorthographia, and shares this
+openly in the hope of reducing the stigma that still surrounds these
+conditions --- particularly in academic and language-learning contexts,
+where they are often misread as indicators of low ability or
+insufficient effort. \LaTeX{} is used throughout as an accessibility
+aid: its high-quality typesetting, structured navigation,
+wheat-coloured page background, and clean separation between source
+editing and rendered output all materially reduce visual fatigue
+compared to word processors. This is noted here because the same
+approach may benefit other learners with similar profiles.
+
+Neuropsychological assessment has identified two features of the
+author's cognitive profile that are directly relevant to this
+project and worth noting for other learners who may recognise
+themselves in them:
+
+\begin{description}
+
+  \item[Reduced working memory] Associated with ADHD, this makes
+    rote memorisation of vocabulary lists or paradigm tables
+    effortful and largely ineffective as a learning strategy.
+    Accordingly, no attempt is made to memorise the material in
+    this document. The goal is repeated, pleasurable exposure ---
+    the same words and constructions reappearing in new contexts
+    until they become familiar without deliberate effort.
+    The analyses are written to be enjoyable to read in their own
+    right, not to be studied.
+
+  \item[Strong pattern recognition and rule derivation] Identified
+    as a compensating strength, this is the capacity to infer
+    underlying rules and structures from examples, and to
+    generalise them rapidly once the pattern is seen. This is
+    precisely what grammatical analysis rewards: rather than
+    memorising that \textit{na cmentarzu} means ``at the cemetery,''
+    the learner recognises the locative pattern, derives the rule,
+    and thereafter reads all locative constructions with growing
+    confidence --- without having memorised a single paradigm table.
+    The Latin background established this kind of structural
+    awareness early; Polish is being acquired in the same way.
+
+\end{description}
+
+These two features together suggest a learning profile that is
+poorly served by conventional language instruction (which relies
+heavily on working memory and rote practice) but well served by
+immersive, contextual, analysis-rich reading of genuinely engaging
+material. The method described in this document was developed
+organically around exactly this profile.
+
+\section*{The AI Tool}
+
+All phrase-by-phrase translation, grammatical analysis, and literary
+commentary in this document was generated interactively using
+\textbf{Claude}, an AI assistant developed by
+\href{https://www.anthropic.com}{Anthropic}. Specifically, the model
+used was \textbf{Claude Sonnet 4.6}
+(model string: \texttt{claude-sonnet-4-6}), accessed via the
+\href{https://claude.ai}{Claude.ai} web interface.
+
+The \LaTeX{} document itself --- its structure, preamble, custom
+commands, grammar reference, and chapter files --- was also drafted
+and maintained by the model in response to the author's direction,
+updated periodically as new material accumulated.
+
+\section*{The Method}
+
+The workflow is simple and requires no technical expertise beyond
+basic \LaTeX{} compilation:
+
+\begin{enumerate}
+
+  \item The learner opens the source book in an e-reader application.
+  Since the book is protected by digital rights management (DRM),
+  text cannot be copied directly. Instead, the learner takes a
+  screenshot of one sentence or short passage at a time.
+
+  \item The screenshot is pasted into a conversation with Claude.
+  The model reads the Polish text from the image and provides:
+  \begin{itemize}
+    \item a full English translation of the passage;
+    \item a word-by-word or phrase-by-phrase breakdown with
+      vocabulary glosses;
+    \item grammatical analysis --- case endings, verb aspect,
+      participial constructions, and other relevant features;
+    \item literary and contextual commentary where the author's
+      choices are particularly interesting.
+  \end{itemize}
+
+  \item The learner reads the analysis, asks follow-up questions
+  (about vocabulary, grammar, or usage), and continues to the
+  next passage at their own pace. There is no pressure to
+  memorise --- the goal is absorption through engaged reading.
+
+  \item Periodically, at natural section breaks, the accumulated
+  analyses are consolidated into the \LaTeX{} document. The model
+  drafts the \LaTeX{} source; the learner compiles it locally
+  and reviews the output.
+
+  \item When the AI session approaches its context window limit,
+  a new session is started. The main \texttt{.tex} file --- which
+  contains a detailed comment block describing the project,
+  learner profile, and working method --- is uploaded to the new
+  session as a handoff document, allowing work to resume
+  seamlessly.
+
+\end{enumerate}
+
+\section*{Depth of Analysis}
+
+The depth of analysis is intentionally variable. Some sentences
+are unpacked in full detail because the grammar or vocabulary is
+instructive. Others are translated more briefly because the content
+is transitional or the constructions are already familiar. The
+learner directs the pace: tangential questions about grammar or
+usage are encouraged at any point, and the conversation moves
+between close analysis and broader literary observation as the
+text warrants.
+
+This variability is a feature, not a deficiency. It mirrors the
+way a knowledgeable reading companion would engage with a text ---
+pausing where things are interesting, moving on where they are not.
+
+\section*{Suitability for Other Languages and Learners}
+
+The method is not specific to Polish. It is applicable to any
+language for which a sufficiently capable LLM exists, and to any
+learner who has a genuine motivation to read a specific text in
+that language. The key conditions that make it work are:
+
+\begin{itemize}
+  \item a source text that the learner \textit{actually wants to read}
+    --- ideally one unavailable in their native language, removing
+    the option of simply reading a translation;
+  \item willingness to proceed slowly and to treat the analysis as
+    enjoyable in its own right, not merely as a means to an end;
+  \item basic familiarity with \LaTeX{} if the learner wishes to
+    maintain a compiled document, though the conversational
+    analysis alone is valuable without any document production.
+\end{itemize}
+
+The method works particularly well for learners with existing
+metalinguistic awareness --- those who have studied another
+inflected language (Latin, Russian, German, classical Greek) and
+already understand concepts like case, aspect, and agreement
+abstractly. For such learners, the AI analysis illuminates the
+\textit{Polish instantiation} of familiar concepts rather than
+introducing entirely new ideas from scratch.
+
+\section*{Transparency and Limitations}
+
+The analyses in this document reflect the capabilities of the model
+at the time of writing and should be treated as a knowledgeable
+first-pass rather than authoritative scholarship. Occasional errors
+in grammatical analysis or nuance are possible. Where the author
+has Polish-speaking family or other expert resources available,
+those remain the final arbiter of correctness.
+
+The quoted Polish passages in this document are brief and used
+solely for educational commentary. They do not constitute
+reproduction of the source text and are consistent with fair use
+principles for personal, non-commercial educational purposes.
+The document is shared openly but the source book remains under
+its original copyright.
+
+\vspace{1.5em}
+\noindent The full project, including all \LaTeX{} source files,
+is available at:\\
+\href{https://github.com/}{[GitHub repository URL to be added]}
+
+\vspace{0.5em}
+\noindent Readers are welcome to adapt the structure, commands,
+and approach for their own language learning projects.
