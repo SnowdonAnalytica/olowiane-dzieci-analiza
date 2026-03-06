@@ -1,7 +1,62 @@
 % ============================================================
-%  ch01_jeszcze_jeden_pogrzeb.tex  —  Chapter 1
+%  ch01_jeszcze_jedan_pogrzeb.tex  —  Chapter 1
 %  Jeszcze jeden pogrzeb (pp. 5–30)
 % ============================================================
+%
+% ── STYLE RULES FOR THIS FILE ───────────────────────────────
+%
+%  These rules must be followed consistently throughout.
+%  Drift from these rules has occurred before — check carefully.
+%
+%  HEADINGS:
+%  - Use \section{} for ALL passage headings without exception.
+%  - \subsection{} and \subsection*{} are NOT used in this file.
+%  - Section titles follow the pattern:
+%      Polish title / English title   (e.g. \section{Obchód / The Rounds})
+%    or just a name if self-evident   (e.g. \section{Groszek})
+%  - \section{} renders in blue bold with a rule beneath
+%    (defined in olowiane_dzieci_analiza.tex).
+%
+%  POLISH SOURCE TEXT:
+%  - Always use \poltext{...} — never \begin{quote}...\end{quote}
+%    and never plain \textit{...} or any other wrapper.
+%  - \poltext{} renders the text in red italic (keywordred).
+%
+%  ENGLISH TRANSLATION:
+%  - Always use \poltrans{...} immediately after \poltext{}.
+%  - \poltrans{} renders in blue (polishblue) with a rule beneath.
+%  - No label precedes the translation — colour contrast suffices.
+%
+%  ANALYSIS NOTES:
+%  - Follow \poltrans{} with free prose commentary.
+%  - Bold Polish terms with \textbf{}, gloss in \textit{}.
+%  - Standard pattern: \textbf{term} --- \textit{gloss} --- analysis.
+%  - Use \medskip before thematic summary paragraphs.
+%  - Grammar or vocabulary notes may be prefixed with:
+%    \noindent\textit{Grammar note:} or \noindent\textit{Vocabulary note:}
+%
+%  PASSAGE SEPARATORS:
+%  - Use % ──────────────────────────────────────────────────
+%    (single % with em-dashes) between passages within a section.
+%    Do NOT use the %% --- style.
+%
+%  UPDATE PROTOCOL:
+%  - The LaTeX file is updated after each passage is confirmed
+%    by the user — not in batches.
+%  - Always append new content by str_replace on the final line.
+%  - Verify line count after each update with wc -l.
+%
+% ── WHERE THE READING CURRENTLY STANDS ─────────────────────
+%
+%  Last passage analysed (session ending 2026-03-06):
+%  "To nie Gorol" — Hanka corrects Groszek; Gorol has moved
+%  away; the men pod sklepem are indistinguishable.
+%  See \section{To nie Gorol / That's Not Gorol} at end of file.
+%
+%  Chapter 1 is in progress. The cemetery obchód continues.
+%
+% ============================================================
+
 
 \chapter{Jeszcze jeden pogrzeb}
 \markboth{Jeszcze jeden pogrzeb}{}
@@ -2062,11 +2117,9 @@ middle of it, Adam, brilliant and lost.
 \section{Marzena Orzeł}
 %% ---------------------------------------------------------------
 
-\begin{quote}
-\textit{Idziemy dalej. Grób Marzeny Orzeł. Rak mózgu. Umarła
+\poltext{Idziemy dalej. Grób Marzeny Orzeł. Rak mózgu. Umarła
 młodo. Na pogrzebie w odkrytej trumnie leżała z głową w
 bandażach. Była inna, nierzeczywista, uroczysta i dostojna.}
-\end{quote}
 
 \poltrans{We move on. The grave of Marzena Orzeł. Brain cancer.
 She died young. At the funeral she lay in an open coffin with her
@@ -2126,15 +2179,13 @@ describing what he saw at her funeral --- a memory that has
 stayed, precise and intact.
 
 %% ---------------------------------------------------------------
-\subsection*{Zamieniona --- Transformation}
+\section{Zamieniona / Transformation}
 %% ---------------------------------------------------------------
 
-\begin{quote}
-\textit{Zamieniona z niepozornej szkolnej koleżanki w obiekt
+\poltext{Zamieniona z niepozornej szkolnej koleżanki w obiekt
 adoracji i powód lamentu jej rodziny, a jednocześnie w budzące
 nasze niezdrowe zainteresowanie martwe zwłoki. Była delegacja ze
 szkoły. To była pierwsza nasza klasowa umarła.}
-\end{quote}
 
 \poltrans{Transformed from an unremarkable schoolmate into an
 object of adoration and the cause of her family's lamentation,
@@ -2197,10 +2248,8 @@ were preceded by this one.
 \section{Gutek}
 %% ---------------------------------------------------------------
 
-\begin{quote}
-\textit{--- A co stało się z Guciem? --- pytam, przypominając
+\poltext{--- A co stało się z Guciem? --- pytam, przypominając
 sobie szkolnych kolegów.}
-\end{quote}
 
 \poltrans{``And what happened to Gutek?'' --- I ask, calling to
 mind my school friends.}
@@ -2239,15 +2288,13 @@ information. The \textit{obchód} is also a survey of what is
 known and what has been lost to silence.
 
 %% ---------------------------------------------------------------
-\subsection*{Groszek odpowiada / Groszek answers}
+\section{Groszek odpowiada / Groszek Answers}
 %% ---------------------------------------------------------------
 
-\begin{quote}
-\textit{--- Jego ojciec był wojskowym, mieszkali w wojskowych
+\poltext{--- Jego ojciec był wojskowym, mieszkali w wojskowych
 blokach. Wyjechali potem gdzieś pod granicę. Nie wiem którą.
 Zapił się podobno. Podobno. Ale może chodziło o kogoś innego
 --- Groszek nie jest pewny.}
-\end{quote}
 
 \poltrans{``His father was in the military, they lived in the
 military blocks. They moved away somewhere near the border
@@ -2318,13 +2365,11 @@ unreliable on a childhood friend who moved away. The repeated
 doubting the first.
 
 %% ---------------------------------------------------------------
-\subsection*{Gorol}
+\section{Gorol}
 %% ---------------------------------------------------------------
 
-\begin{quote}
-\textit{--- A Gorol? --- przypominam sobie ksywę dawnego osiłka
+\poltext{--- A Gorol? --- przypominam sobie ksywę dawnego osiłka
 o ospowatej twarzy.}
-\end{quote}
 
 \poltrans{``And Gorol?'' --- I recall the nickname of a former
 muscleman with a pockmarked face.}
@@ -2378,3 +2423,156 @@ an instrumental phrase of description: \textit{o} + instrumental
 characterising someone by a physical attribute. The same
 structure governs \textit{chłopak o niebieskich oczach} (a boy
 with blue eyes) throughout Polish narrative prose.
+
+%% ---------------------------------------------------------------
+\section{Na dobrej drodze / On the Right Track}
+%% ---------------------------------------------------------------
+
+\poltext{--- Ten chyba jeszcze się nie zapił. Ale jest na dobrej
+drodze. Możesz go spotkać na osiedlu pod sklepem. Razem z
+innymi: Dyjakiem, Maligłówką\ldots{} Pamiętasz ich jeszcze?}
+
+\poltrans{``This one probably hasn't drunk himself to ruin yet.
+But he's on the right track. You can find him on the estate by
+the shop. Together with the others: Dyjak, Maligłówka\ldots{}
+Do you still remember them?''}
+
+Groszek corrects the conversation's direction. The \textit{zapił
+się} story belonged to someone else; Gorol is alive and
+locatable --- though the news is not straightforwardly good.
+
+\textbf{Ten chyba jeszcze się nie zapił} --- \textit{this one
+probably hasn't drunk himself to ruin yet}. \textbf{Ten} ---
+\textit{this one} --- the demonstrative used familiarly, almost
+dismissively, referring back to Gorol. \textbf{Chyba} ---
+\textit{probably, I think} --- Groszek's characteristic hedging
+particle. \textbf{Jeszcze} --- \textit{yet, still} --- doing
+quiet work: not \textit{didn't} but \textit{hasn't yet}, leaving
+the future pointedly open. The same \textit{zapić się} from the
+Gutek passage, now negated --- the word connects the two men:
+one apparently did, this one apparently hasn't. Yet.
+
+\textbf{Ale jest na dobrej drodze} --- \textit{but he's on the
+right track}. A piece of bitter irony. \textbf{Dobra droga} ---
+\textit{good road, right path} --- an idiom that normally signals
+someone is on track for success. Here Groszek deploys it to mean
+the opposite: Gorol is on track toward the same ruin. The
+compliment form delivering the insult content.
+
+\textbf{Możesz go spotkać na osiedlu pod sklepem} --- \textit{you
+can find him on the estate by the shop}. \textbf{Możesz} ---
+\textit{you can} --- second person singular, addressing the
+narrator directly. \textbf{Na osiedlu} --- \textit{on the
+estate}, locative of \textit{osiedle}: the housing estate, the
+\textit{bloki}. \textbf{Pod sklepem} --- \textit{by the shop}
+--- the classic post-communist gathering point, the patch of
+ground outside the local \textit{sklep} where men congregate.
+The address is precise without being an address: everyone knows
+where \textit{pod sklepem} is.
+
+\textbf{Razem z innymi} --- \textit{together with the others}.
+Not alone. There is a group there, a cohort, a recognisable
+social formation.
+
+\textbf{Dyjakiem, Maligłówką} --- two names in the instrumental
+after \textit{z} (with). Both clearly nicknames.
+\textbf{Dyjak} --- obscure origin, possibly from \textit{diak}
+(deacon) or a regional coinage. \textbf{Maligłówka} ---
+transparent: \textit{mała główka} compressed --- \textit{little
+head}, a physical nickname. The instrumental signals membership
+of the \textit{razem z} group: Gorol can be found among them.
+
+\textbf{Pamiętasz ich jeszcze?} --- \textit{do you still
+remember them?} A sudden turn toward the narrator --- and toward
+the reader. \textbf{Jeszcze} again: \textit{still}, implying
+time has passed and forgetting is natural. Groszek tests whether
+the Warsaw man's memory extends to these peripheral figures: not
+the dead, but the living-and-lost, the ones drinking
+\textit{pod sklepem}.
+
+\medskip
+The passage quietly redraws the social map. There is a category
+the \textit{obchód} hasn't yet reckoned with: those who aren't
+dead but who have come to rest in a different kind of permanence
+--- the estate bench, the shop doorway, the daily bottle. Not a
+grave to visit, but a spot where you can still find them. Gorol
+is alive; he just hasn't gone anywhere.
+
+%% ---------------------------------------------------------------
+\section{To nie Gorol / That's Not Gorol}
+%% ---------------------------------------------------------------
+
+\poltext{--- To nie Gorol --- zaprzecza Hanka. --- Gorol już tu
+dawno nie mieszka.\\
+--- A kto? --- pyta Groszek.\\
+--- A bo ja wiem? Wszyscy są do siebie podobni.}
+
+\poltrans{``That's not Gorol,'' Hanka contradicts. ``Gorol
+hasn't lived here for a long time.''\\
+``Then who?'' asks Groszek.\\
+``How would I know? They all look alike.''}
+
+A miniature comedy of errors, three lines, and then a sentence
+that lands with uncomfortable weight.
+
+\textbf{To nie Gorol} --- \textit{that's not Gorol}. Flat,
+immediate contradiction. Hanka has been listening, and she knows
+something Groszek doesn't. \textbf{To} --- \textit{that, it}
+--- the blunt demonstrative.
+
+\textbf{zaprzecza Hanka} --- \textit{Hanka contradicts}.
+\textbf{Zaprzeczać} --- \textit{to contradict, to deny} --- more
+formal than simply \textit{mówi} (says); it registers that she
+is specifically negating what was just said. Hanka has had
+quieter moments so far --- lighting candles, producing
+cigarettes --- and here she cuts in with authority.
+
+\textbf{Gorol już tu dawno nie mieszka} --- \textit{Gorol hasn't
+lived here for a long time}. \textbf{Już} --- \textit{already,
+no longer} --- paired with negation it means \textit{no longer}:
+he has already departed, and the departure is settled.
+\textbf{Tu} --- \textit{here}. \textbf{Dawno} --- \textit{long
+ago, for a long time} --- his absence isn't recent. Groszek's
+confident \textit{możesz go spotkać na osiedlu pod sklepem} was
+wrong: the intelligence is out of date, or it was never Gorol
+to begin with.
+
+\textbf{A kto?} --- \textit{then who? so who is it?} Groszek's
+response, two words. \textbf{A} --- the pivoting \textit{a}
+again, now expressing genuine bafflement. If it's not Gorol
+\textit{pod sklepem}, who is Groszek thinking of?
+
+\textbf{pyta Groszek} --- \textit{Groszek asks}. Present tense
+throughout this exchange --- the dialogue is immediate, alive.
+
+\textbf{A bo ja wiem?} --- \textit{how would I know?} One of
+the most characteristically Polish rhetorical constructions.
+\textbf{A bo} --- a colloquial particle combination expressing
+mild exasperation or rhetorical deflection. \textbf{Ja wiem}
+--- \textit{I know} --- but as a question it means the opposite:
+\textit{I don't know, and why would you expect me to?} A shrug
+rendered as syntax.
+
+\textbf{Wszyscy są do siebie podobni} --- \textit{they all look
+alike, they all resemble each other}. \textbf{Do siebie podobni}
+--- \textit{similar to each other, resembling one another} ---
+the reflexive \textit{siebie} making it mutual: each resembles
+all the others. \textbf{Wszyscy} --- \textit{everyone, all of
+them}.
+
+\medskip
+The sentence is the passage's sting. Hanka is speaking about
+the men \textit{pod sklepem} --- the Gorols, the Dyjaks, the
+Maligłówkas of the estate --- and her words carry the flat
+dismissal of someone who has watched this happen too many times
+to distinguish between individuals. They've blurred into a
+single type: the man by the shop, the bottle, the bench, the
+slow ruin. Not cruel so much as exhausted.
+
+\medskip
+\noindent\textit{Vocabulary note:} \textbf{Podobni} connects
+back to the chapter's recurring \textit{podobno} (apparently,
+reportedly) and to the earlier motif of recognition and
+resemblance --- \textit{podobny} (similar, resembling) threads
+through the text's concern with who can be told apart from whom,
+who is remembered as a person and who becomes a category.

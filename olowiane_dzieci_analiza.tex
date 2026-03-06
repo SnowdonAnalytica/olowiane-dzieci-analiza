@@ -100,17 +100,25 @@
 %
 %  If you are a new AI session picking up this project:
 %  1. Read this comment block in full.
-%  2. Read grammar.tex to understand the grammatical framework
-%     established so far.
-%  3. Read the most recent active chapter file to see where
-%     the reading left off.
-%  4. The user will supply the next passage as a screenshot.
+%  2. Read the header comment block of the active chapter file
+%     (currently ch01_jeszcze_jeden_pogrzeb.tex) — it contains
+%     explicit style rules and the current reading position.
+%  3. Read grammar.tex to understand the grammatical framework.
+%  4. The user will supply passages as screenshots, one at a time.
 %     Continue the phrase-by-phrase analysis in the same style.
-%  5. When enough new material has accumulated, offer to update
-%     the relevant chapter .tex file.
-%  6. Maintain the tone of the existing analyses: informative,
+%  5. Update the chapter .tex file after EACH passage is confirmed
+%     by the user — do not batch updates. This is the agreed
+%     protocol to avoid losing work between sessions.
+%  6. Maintain the tone of existing analyses: informative,
 %     literary where appropriate, and enjoyable to read in their
 %     own right — not merely functional glosses.
+%
+%  CRITICAL STYLE RULES (details in chapter file header):
+%  - ALL passage headings use \section{} — never \subsection.
+%  - Polish source text always in \poltext{} — never \begin{quote}.
+%  - English translation always in \poltrans{} — no label prefix.
+%  - Analysis in free prose, \textbf{term} --- \textit{gloss} ---
+%  - Read the chapter file header before writing any new content.
 %
 % ============================================================
 
